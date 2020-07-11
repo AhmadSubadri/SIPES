@@ -8,13 +8,11 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/backend/template/assets/css/style.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/backend/template/assets/plugins/notification/css/notification.min.css">
     <style>
-    <style>
     .alert span {
         cursor: pointer;
         padding-right: 5px;
     }
 </style>
-    </style>
 </head>
 
 <body class="auth-prod-slider">
@@ -25,7 +23,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 mb-5">
                         <div class="card-body">
-                            <?php echo form_open("auth/login"); ?>
+                            <?php echo form_open("Auth/login"); ?>
                             <img src="<?php echo base_url() ?>assets/backend/template/assets/images/UMBY.jpg" alt="" class="img-fluid mb-4">
                             <h4 class="mb-3 f-w-400">Login into your account</h4>
                             <div class="input-group mb-2">

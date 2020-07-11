@@ -28,7 +28,7 @@ class Auth extends CI_Controller
 		if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
-			redirect('auth/login', 'refresh');
+			redirect('Auth/login', 'refresh');
 		}
 		else if (!$this->ion_auth->is_admin()) // remove this elseif if you want to enable this for non-admins
 		{
@@ -73,7 +73,7 @@ class Auth extends CI_Controller
 				// if the login was un-successful
 				// redirect them back to the login page
 				$this->session->set_flashdata('danger', $this->ion_auth->errors());
-				redirect('auth/login', 'refresh'); // use redirects instead of loading views for compatibility with MY_Controller libraries
+				redirect('Auth/login', 'refresh'); // use redirects instead of loading views for compatibility with MY_Controller libraries
 			}
 		}
 		else
@@ -101,7 +101,7 @@ class Auth extends CI_Controller
 				'required' => 'requried',
 			];
 
-			$this->_render_page('auth' . DIRECTORY_SEPARATOR . 'login', $this->data);
+			$this->_render_page('Auth' . DIRECTORY_SEPARATOR . 'login', $this->data);
 		}
 	}
 
@@ -116,7 +116,7 @@ class Auth extends CI_Controller
 		$this->ion_auth->logout();
 
 		// redirect them to the login page
-		redirect('auth/login', 'refresh');
+		redirect('Auth/login', 'refresh');
 	}
 
 	/**
